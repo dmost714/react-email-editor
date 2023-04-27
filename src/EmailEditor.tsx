@@ -48,13 +48,13 @@ export const EmailEditor = React.forwardRef<EditorRef, EmailEditorProps>(
 
       setEditor(
         unlayer.createEditor({
-          ...options,
           id: editorId.current,
           displayMode: 'email',
           source: {
             name: pkg.name,
             version: pkg.version,
           },
+          ...options
         })
       );
     }, [
